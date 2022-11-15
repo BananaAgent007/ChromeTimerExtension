@@ -11,10 +11,6 @@ websites = {}
 times = {}
 predict = [0]
 
-@app.route('/')
-def hello_world():
-    return render_template("index.html")
-
 #get -> return data to extension
 #post -> get data from extension
 @app.route('/test', methods = ['GET'])
@@ -160,4 +156,4 @@ if __name__ == '__main__':
             pass
     print(times)
     #app.run(debug = True)
-    app.run(host='0.0.0.0', port=8080, debug = True, threaded = True)
+    app.run(host='0.0.0.0', port=8080, debug = False, threaded = True)
